@@ -1,5 +1,7 @@
 package edu.game;
 
+import java.util.Vector;
+
 public class UnitMain {
 
 	public static void main(String[] args) {
@@ -27,24 +29,40 @@ public class UnitMain {
 			WarIntf[] u = new WarIntf[4];
 
 			u[0] = new Tank("Russia", "North", 100);
-
 			u[1] = new Airplane("China", "West", 200);
-
 			u[2] = new Submarine("Japan", "East", 300);
-
 			u[3] = new Soldier("Taiwan", "South", 400);
 
 			for (WarIntf t : u) {
-				if (t != null)
-					t.war();
+				t.war();
 
 			}
 
 		}
 		System.out.println("=========");
-	}
 
+		{
+			Vector<Unit> li = new Vector<>();
+
+			li.add(new Tank("Russia", "North", 100));
+			li.add(new Airplane("China", "West", 200));
+			li.add(new Submarine("Japan", "East", 300));
+			li.add(new Soldier("Taiwan", "South", 400));
+
+			for (Unit t : li) {
+				t.war();
+			}
+//			int size = list.size();
+//			for (int i = 0 ; i < size ; i++) {
+//				Unit t = list [i];
+//			}
+//			for (Unit t : list) {
+//			}
+		}
+		System.out.println("=========");
+	}
 }
+
 /*
  * class Unit {
  * 
